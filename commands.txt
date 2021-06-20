@@ -1,0 +1,8 @@
+docker build --tag python-django .
+docker run --publish 8000:8000 python-django
+
+docker build -t superriya/django-docker-portfoliapp:live-hub .
+docker push superriya/django-docker-portfoliapp:live-hub
+
+docker stop container_id
+docker rmi image_name OR docker rm container_id

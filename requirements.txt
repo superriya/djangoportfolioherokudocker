@@ -1,0 +1,28 @@
+#brew tap heroku/brew && brew install heroku
+# python -m django --version
+asgiref==3.3.4
+Django==3.2.4
+djangorestframework==3.12.4
+Pillow==8.2.0
+pytz==2021.1
+sqlparse==0.4.1
+typing-extensions==3.10.0.0
+
+
+
+# sudo pip3 install gunicorn
+# pipenv run gunicorn myportfolio.wsgi:application --bind 0.0.0.0:8888
+
+# **************after sign in heroku*****************
+# brew tap heroku/brew && brew install heroku
+# heroku --version
+# heroku create heroku-portfolio-docker
+# heroku container:login
+
+# *********** docker image ***************
+# docker build -t djportfolio-docker-to-heroku -f Dockerfile .
+
+# Push & Release
+# Now we need to push an instance (container) of our image to heroku.
+# heroku container:push web -a heroku-portfolio-docker
+# heroku container:release web -a heroku-portfolio-docker
